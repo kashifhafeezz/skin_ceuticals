@@ -358,6 +358,10 @@
         </div>
     </footer>
 
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
 
     <script>
         function openCustomPopup() {
@@ -473,6 +477,27 @@
             window.addEventListener("resize", function () {
                 initSwipers();
             });
+        });
+    </script>
+
+    <!-- Scroll to top script -->
+    <script>
+        const scrollToTopBtn = document.getElementById("scrollToTop");
+        window.onscroll = function () {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                scrollToTopBtn.classList.add("active");
+            } else {
+                scrollToTopBtn.classList.remove("active");
+            }
+        };
+        scrollToTopBtn.addEventListener("click", function () {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+
+            // window.scrollTo({
+            //     top: 0,
+            //     behavior: "smooth"
+            // });
         });
     </script>
 
