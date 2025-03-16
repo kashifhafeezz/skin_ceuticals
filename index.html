@@ -4,9 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkinCeuticals Landing Page</title>
+    <title>SkinCeuticals</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+    <!-- SWIPER CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <!-- CSS -->
     <link href="css/header_style.css" rel="stylesheet">
 
@@ -23,6 +27,7 @@
     </header>
 
     <main class="main">
+
         <!-- Header Image -->
         <section id="hero" class="hero section">
             <div class="container">
@@ -32,10 +37,11 @@
                 </div>
             </div>
         </section>
+
         <!-- BUY NOW BUTTON -->
         <section>
-            <div class="row justify-content-center">
-                <div class="col-xl-10">
+            <div class="row justify-content-center" id="testimonials">
+                <div class="col-xl-3">
                     <div class="text-center">
                         <a class="cta-btn" href="#" onclick="openCustomPopup()"><b>BUY NOW</b></a>
                     </div>
@@ -43,6 +49,7 @@
             </div>
 
         </section>
+
         <!-- BUY NOW DIALOG -->
         <div id="customPopup" class="custom-popup">
             <div class="custom-popup-content">
@@ -75,7 +82,56 @@
                     <b>BESTSELLERS</b>
                 </p>
             </div>
+
+
+
+            <!-- Swiper Container -->
+            <div class="swiper-container container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="assets/dr_one.jpg" alt="Image 1"></div>
+                    <div class="swiper-slide"><img src="assets/dr_two.jpeg" alt="Image 2"></div>
+                    <div class="swiper-slide"><img src="assets/dr_three.jpg" alt="Image 3"></div>
+                    <div class="swiper-slide"><img src="assets/dr_four.jpg" alt="Image 4"></div>
+                </div>
+
+                <!-- Pagination (this will appear below the cards) -->
+                <div class="swiper-pagination"></div>
+            </div>
         </section>
+
+        <!-- Link to Swiper JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true, // Make pagination clickable
+                },
+                breakpoints: {
+                    1400: {
+                        slidesPerView: 4,
+
+                    },
+                    1200: {
+                        slidesPerView: 3,
+                    },
+                    // When screen width is 600px or smaller, show 2 slides per view
+                    600: {
+                        slidesPerView: 2,
+                    },
+                    // When screen width is 480px or smaller, show 1 slide per view
+                    500: {
+                        slidesPerView: 1.5,
+                    },
+                },
+            });
+        </script>
+
+
+
+
 
 
 
@@ -139,48 +195,73 @@
             </div>
         </section>
 
-
-
-
         <!-- Doctor's choice this ramadan -->
         <section>
             <div class="container mt-3">
-                <p class="text-center px-2 p-3 mb-5 section-title">
+                <p class="text-center px-2 p-3 section-title">
                     <b>DOCTOR’S CHOICE THIS RAMADAN</b>
                 </p>
             </div>
+
+            <div class="container">
+                <h4 class="text-center">
+                    TRANSFORM YOUR SKIN
+                </h4>
+            </div>
+
+            <div class="container d-flex justify-content-center gap-4 text-center ">
+
+                <div class="user-profile">
+                    <div class="image">
+                        <img src="assets/dr_one.jpg" />
+                    </div>
+                    <h4><b>Dr. Linah Saleh</b></h4>
+                    <p> Dermatologist </p>
+                </div>
+
+                <div class="user-profile">
+                    <div class="image">
+                        <img src="assets/dr_two.jpeg" />
+                    </div>
+                    <h4><b>Dr. Nour Gerbaka</b></h4>
+                    <p> Dermatologist </p>
+                </div>
+
+                <div class="user-profile">
+                    <div class="image">
+                        <img src="assets/dr_three.jpg" />
+                    </div>
+                    <h4><b>Dr. Salma Barqawi</b></h4>
+                    <p> Consultant Dermatologist </p>
+                </div>
+
+                <div class="user-profile">
+                    <div class="image">
+                        <img src="assets/dr_four.jpg" />
+                    </div>
+                    <h4><b>Dr. Shahad</b></h4>
+                    <p> Aesthetic Doctor </p>
+                </div>
+
+            </div>
+
         </section>
 
-
-
-        <!-- <div class="container mt-4">
-            <div class="d-flex flex-wrap justify-content-between mx-2 gap-2">
-
-                <div class="circle-image flex-fill">
-                    <img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
-                        alt="Image 1">
-                </div>
-                <div class="circle-image flex-fill">
-                    <img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
-                        alt="Image 2">
-                </div>
-                <div class="circle-image flex-fill">
-                    <img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
-                        alt="Image 3">
-                </div>
-                <div class="circle-image flex-fill">
-                    <img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
-                        alt="Image 4">
+        <!-- Ramadan Must Have -->
+        <section>
+            <div class="row justify-content-center">
+                <div class="col-xl-5">
+                    <div class="text-center">
+                        <a class="cta-btn" href="#testimonials"><b>RAMADAN MUST HAVES</b></a>
+                    </div>
                 </div>
             </div>
-        </div> -->
-
-
-
-
-
-
-
+            <div class="container grid">
+                <a class="anchor" href="#testimonials">P-TIOX</a>
+                <a class="anchor" href="#testimonials">C E FERULIC</a>
+                <a class="anchor" href="#testimonials">H.A INTENSIFIER MULTI-GLYCAN</a>
+            </div>
+        </section>
 
 
     </main>
@@ -199,6 +280,7 @@
     </script>
 
 
+
     <!-- Script -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -206,6 +288,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
+
+
 </body>
 
 </html>
