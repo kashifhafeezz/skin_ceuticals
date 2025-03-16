@@ -12,8 +12,50 @@ body {
   color: #333;
   line-height: 1.6;
   scroll-behavior: smooth;
+  direction: rtl;
 
 }
+
+/***** Initial Loading *****/
+
+#intialloader {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  overflow: hidden;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.6s ease-out;
+}
+
+#intialloader:before {
+  content: "";
+  border: 6px solid #ffffff;
+  border-color: #5383b7 transparent #5383b7 transparent;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: animate-preloader 1.5s linear infinite;
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
 
 /***** Header *****/
 header {
@@ -326,4 +368,9 @@ img {
   .footer-copyright {
     font-size: 12px;
   }
+}
+
+[data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
 }
