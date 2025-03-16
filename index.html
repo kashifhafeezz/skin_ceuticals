@@ -334,6 +334,34 @@
                     <b>VISIBLE RESULTS*</b>
                 </p>
             </div>
+            <div class="container py-4">
+                <div class="comparison-container">
+                    <div class="img-container">
+                        <div class="img-before">
+                            <img src="assets/before_image.jpg" alt="Before treatment">
+                        </div>
+
+                        <div class="img-after">
+                            <img src="assets/after_image.jpeg" alt="After treatment">
+                        </div>
+                    </div>
+
+                    <div class="divider" id="divider">
+                        <div class="slider-button">
+                            <div class="arrows">
+                                <span class="arrow-left">&#8249;</span>
+                                <span class="arrow-right">&#8250;</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="label label-before">Before</div>
+                    <div class="label label-after">After (in 12 weeks)</div>
+                </div>
+
+                <p class="source-note">* Source: Forehead fine lines. Clinical assessment by expert, 50 women, 12 weeks.
+                </p>
+            </div>
         </section>
 
     </main>
@@ -363,6 +391,7 @@
         <i class="fas fa-arrow-up"></i>
     </div>
 
+    <!-- Buy Now Button Pop Up  -->
     <script>
         function openCustomPopup() {
             document.getElementById("customPopup").style.display = "flex";
@@ -498,6 +527,78 @@
             //     top: 0,
             //     behavior: "smooth"
             // });
+        });
+    </script>
+
+    <!-- Comparison Container -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const container = document.querySelector('.comparison-container');
+            const beforeImg = document.querySelector('.img-before');
+            const divider = document.getElementById('divider');
+            let isDragging = false;
+
+            updatePosition(50);
+
+            function updatePosition(percent) {
+                percent = Math.max(0, Math.min(100, percent));
+
+                divider.style.left = `${percent}%`;
+
+                beforeImg.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
+            }
+
+            function calculatePosition(pageX) {
+                const rect = container.getBoundingClientRect();
+                let percent = ((pageX - rect.left) / rect.width) * 100;
+                return Math.max(0, Math.min(100, percent));
+            }
+
+            divider.addEventListener('mousedown', function (e) {
+                isDragging = true;
+                e.preventDefault();
+            });
+
+            document.addEventListener('mouseup', function () {
+                isDragging = false;
+            });
+
+            document.addEventListener('mousemove', function (e) {
+                if (!isDragging) return;
+                const percent = calculatePosition(e.pageX);
+                updatePosition(percent);
+            });
+
+
+            divider.addEventListener('touchstart', function (e) {
+                isDragging = true;
+            });
+
+            document.addEventListener('touchend', function () {
+                isDragging = false;
+            });
+
+            document.addEventListener('touchmove', function (e) {
+                if (!isDragging) return;
+                const touch = e.touches[0];
+                const percent = calculatePosition(touch.pageX);
+                updatePosition(percent);
+                e.preventDefault();
+            });
+
+            container.addEventListener('click', function (e) {
+                if (e.target === divider || divider.contains(e.target)) return;
+
+                const percent = calculatePosition(e.pageX);
+                updatePosition(percent);
+            });
+
+            window.addEventListener('resize', function () {
+                const currentLeft = parseFloat(divider.style.left);
+                if (!isNaN(currentLeft)) {
+                    updatePosition(currentLeft);
+                }
+            });
         });
     </script>
 
