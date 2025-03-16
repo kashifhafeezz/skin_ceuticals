@@ -5,6 +5,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SkinCeuticals</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="SkinCeuticals - Advanced Skincare Backed by Science. Discover our bestsellers and dermatologist-recommended products.">
+    <meta name="keywords" content="skincare, SkinCeuticals, dermatology, anti-aging, antioxidants">
+
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
 
@@ -24,8 +31,8 @@
             <img src="assets/skinceuticals_white_logo.png" alt="SkinCeuticals Logo" />
         </a>
         <nav>
-            <a href="#">English</a>
-            <a href="#">العربية</a>
+            <a href="#" id="english-btn" data-i18n="nav_english">English</a>
+            <a href="#" id="arabic-btn" data-i18n="nav_arabic">العربية</a>
         </nav>
     </header>
 
@@ -45,7 +52,7 @@
             <div class="row justify-content-center" id="testimonials">
                 <div class="col-xl-3">
                     <div class="text-center">
-                        <a class="cta-btn" href="#" onclick="openCustomPopup()"><b>BUY NOW</b></a>
+                        <a class="cta-btn" href="#" onclick="openCustomPopup()"><b data-i18n="buy_now">BUY NOW</b></a>
                     </div>
                 </div>
             </div>
@@ -55,7 +62,7 @@
         <div id="customPopup" class="custom-popup">
             <div class="custom-popup-content">
                 <span class="close-btn" onclick="closeCustomPopup()">x</span>
-                <h2>Choose Your Region</h2>
+                <h2 data-i18n="choose_region">Choose Your Region</h2>
 
                 <!-- UAE Section -->
                 <h3 class="region-header">UAE</h3>
@@ -80,7 +87,7 @@
         <section class="ptiox-benefits-section-1">
             <div class="container mt-3">
                 <p class="text-center px-4 p-3 section-title">
-                    <b>BESTSELLERS</b>
+                    <b data-i18n="bestsellers">BESTSELLERS</b>
                 </p>
             </div>
 
@@ -95,7 +102,7 @@
                                     <img src="assets/age_interrupter.png" alt="A.G.E. Interrupter Advanced"
                                         class="product-image" />
                                     <div class="product-info">
-                                        <h5>PRODUCT INFORMATION >></h5>
+                                        <h5 data-i18n="product_information">PRODUCT INFORMATION >></h5>
                                     </div>
                                 </div>
                             </div>
@@ -105,7 +112,7 @@
                                 <div class="product-card" data-bs-toggle="modal" data-bs-target="#productModal2">
                                     <img src="assets/ce_ferulic.png" alt="C E Ferulic" class="product-image" />
                                     <div class="product-info">
-                                        <h5>PRODUCT INFORMATION >></h5>
+                                        <h5 data-i18n="product_information">PRODUCT INFORMATION >></h5>
                                     </div>
                                 </div>
                             </div>
@@ -115,7 +122,7 @@
                                 <div class="product-card" data-bs-toggle="modal" data-bs-target="#productModal3">
                                     <img src="assets/ha_intensifier.png" alt="H.A Intensifier" class="product-image" />
                                     <div class="product-info">
-                                        <h5>PRODUCT INFORMATION >></h5>
+                                        <h5 data-i18n="product_information">PRODUCT INFORMATION >></h5>
                                     </div>
                                 </div>
                             </div>
@@ -125,7 +132,7 @@
                                 <div class="product-card" data-bs-toggle="modal" data-bs-target="#productModal4">
                                     <img src="assets/ptiox.png" alt="Phloretin CF" class="product-image" />
                                     <div class="product-info">
-                                        <h5>PRODUCT INFORMATION >></h5>
+                                        <h5 data-i18n="product_information">PRODUCT INFORMATION >></h5>
                                     </div>
                                 </div>
                             </div>
@@ -145,18 +152,18 @@
         <section>
             <div class="container mt-3">
                 <p class="text-center px-2 p-3 section-title">
-                    <b>OUR PROMISE</b>
+                    <b data-i18n="our_promise">OUR PROMISE</b>
                 </p>
             </div>
 
             <div class="container">
-                <p class="custom-align">
+                <p class="custom-align" data-i18n="promise_text_1">
                     Born from decades of skin cancer research that led to pivotal
                     breakthroughs in antioxidants, our high potency formulas are
                     concentrated in pure actives and proven to penetrate optimally into
                     skin.
                 </p>
-                <p class="custom-align mb-5">
+                <p class="custom-align mb-5" data-i18n="promise_text_2">
                     Our clinical skincare is used by dermatologists, plastic surgeons,
                     and medi-spas for daily homecare, and to complement aesthetic
                     treatments. We formulate to correct signs of aging, protect healthy
@@ -169,12 +176,12 @@
         <section>
             <div class="container mt-3">
                 <p class="text-center px-2 p-3 section-title">
-                    <b>ADVANCED SKINCARE BACKED BY SCIENCE</b>
+                    <b data-i18n="advanced_skincare">ADVANCED SKINCARE BACKED BY SCIENCE</b>
                 </p>
             </div>
 
             <div class="container">
-                <p class="custom-align mb-5">
+                <p class="custom-align mb-5" data-i18n="science_text">
                     Our mission is to improve skin health. Dedicated to this purpose, we
                     make one simple promise—to provide advanced skincare backed by
                     science.
@@ -186,12 +193,12 @@
         <section>
             <div class="container mt-3">
                 <p class="text-center px-2 p-3 section-title">
-                    <b>OUR INTEGRATED SKINCARE PHILOSOPHY</b>
+                    <b data-i18n="integrated_philosophy">OUR INTEGRATED SKINCARE PHILOSOPHY</b>
                 </p>
             </div>
 
             <div class="container">
-                <p class="custom-align mb-5">
+                <p class="custom-align mb-5" data-i18n="philosophy_text">
                     At SkinCeuticals, we’ve developed an integrated skincare approach
                     that ensures optimal consumer results. Our powerful products are
                     designed to work synergistically with clinical procedures and other
@@ -204,12 +211,12 @@
         <section>
             <div class="container mt-3">
                 <p class="text-center px-2 p-3 section-title">
-                    <b>DOCTOR’S CHOICE THIS RAMADAN</b>
+                    <b data-i18n="doctors_choice">DOCTOR’S CHOICE THIS RAMADAN</b>
                 </p>
             </div>
 
             <div class="container">
-                <h4 class="text-center">TRANSFORM YOUR SKIN</h4>
+                <h4 class="text-center" data-i18n="transform_skin">TRANSFORM YOUR SKIN</h4>
             </div>
 
             <div class="container d-flex justify-content-center gap-4 text-center" data-bs-toggle="modal"
@@ -219,7 +226,7 @@
                         <img src="assets/dr_one.jpg" />
                     </div>
                     <h4><b>Dr. Linah Saleh</b></h4>
-                    <p>Dermatologist</p>
+                    <p data-i18n="dermatologist">Dermatologist</p>
                 </div>
 
                 <div class="user-profile">
@@ -227,7 +234,7 @@
                         <img src="assets/dr_two.jpeg" />
                     </div>
                     <h4><b>Dr. Nour Gerbaka</b></h4>
-                    <p>Dermatologist</p>
+                    <p data-i18n="dermatologist">Dermatologist</p>
                 </div>
 
                 <div class="user-profile">
@@ -235,7 +242,7 @@
                         <img src="assets/dr_three.jpg" />
                     </div>
                     <h4><b>Dr. Salma Barqawi</b></h4>
-                    <p>Consultant Dermatologist</p>
+                    <p data-i18n="consultant_dermatologist">Consultant Dermatologist</p>
                 </div>
 
                 <div class="user-profile">
@@ -243,7 +250,7 @@
                         <img src="assets/dr_four.jpg" />
                     </div>
                     <h4><b>Dr. Shahad</b></h4>
-                    <p>Aesthetic Doctor</p>
+                    <p data-i18n="aesthetic_doctor">Aesthetic Doctor</p>
                 </div>
             </div>
         </section>
@@ -253,21 +260,22 @@
             <div class="row justify-content-center">
                 <div class="col-xl-5">
                     <div class="text-center">
-                        <a class="cta-btn" href="#testimonials"><b>RAMADAN MUST HAVES</b></a>
+                        <a class="cta-btn" href="#testimonials"><b data-i18n="ramadan_must_haves">RAMADAN MUST
+                                HAVES</b></a>
                     </div>
                 </div>
             </div>
             <div class="container grid">
-                <a class="anchor" href="#testimonials">P-TIOX</a>
-                <a class="anchor" href="#testimonials">C E FERULIC</a>
-                <a class="anchor" href="#testimonials">H.A INTENSIFIER MULTI-GLYCAN</a>
+                <a class="anchor" href="#testimonials" data-i18n="ptiox">P-TIOX</a>
+                <a class="anchor" href="#testimonials" data-i18n="ce_ferulic">C E FERULIC</a>
+                <a class="anchor" href="#testimonials" data-i18n="ha_intensifier">H.A INTENSIFIER MULTI-GLYCAN</a>
             </div>
         </section>
 
         <!-- P-TIOX Benefits -->
         <section>
             <div class="container">
-                <h4 class="text-center"><b>P-TIOX Benefits</b></h4>
+                <h4 class="text-center"><b data-i18n="ptiox_benefits">P-TIOX Benefits</b></h4>
             </div>
 
             <!-- Swiper-->
@@ -321,7 +329,7 @@
             <div class="row justify-content-center" id="testimonials">
                 <div class="col-xl-3">
                     <div class="text-center">
-                        <a class="cta-btn" href="#" onclick="openCustomPopup()"><b>BUY NOW</b></a>
+                        <a class="cta-btn" href="#" onclick="openCustomPopup()"><b data-i18n="buy_now">BUY NOW</b></a>
                     </div>
                 </div>
             </div>
@@ -331,7 +339,7 @@
         <section>
             <div class="container mt-3">
                 <p class="text-center px-4 p-3 section-title">
-                    <b>VISIBLE RESULTS*</b>
+                    <b data-i18n="visible_results">VISIBLE RESULTS*</b>
                 </p>
             </div>
             <div class="container py-4">
@@ -354,18 +362,16 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="label label-before">Before</div>
-                    <div class="label label-after">After (in 12 weeks)</div>
+                    <div class="label label-before" data-i18n="before">Before</div>
+                    <div class="label label-after" data-i18n="after">After (in 12 weeks)</div>
                 </div>
-
-                <p class="source-note">* Source: Forehead fine lines. Clinical assessment by expert, 50 women, 12 weeks.
+                <p class="source-note" data-i18n="source_note">* Source: Forehead fine lines. Clinical assessment by
+                    expert, 50 women, 12 weeks.
                 </p>
             </div>
         </section>
 
     </main>
-
 
     <!-- Footer -->
     <footer class="footer">
@@ -377,11 +383,13 @@
 
         <div class="footer-divider"></div>
 
-        <div class="footer-copyright">
+        <div class="footer-copyright" data-i18n="copyright">
             © COPYRIGHT © 2025 LOREAL. ALL RIGHTS RESERVED.
             <span class="footer-links">
-                <a href="https://www.loreal.com/en/group/global-terms-of-use/">Privacy Policy</a> -
-                <a href="https://www.loreal.com/en/group/global-terms-of-use/">Terms of Service</a>
+                <a href="https://www.loreal.com/en/group/global-terms-of-use/" data-i18n="privacy_policy">Privacy
+                    Policy</a> -
+                <a href="https://www.loreal.com/en/group/global-terms-of-use/" data-i18n="terms_of_service">Terms of
+                    Service</a>
             </span>
         </div>
     </footer>
@@ -602,6 +610,130 @@
         });
     </script>
 
+    <!-- Translation -->
+    <script>
+        const translations = {
+            english: {
+                "nav_english": "English",
+                "nav_arabic": "العربية",
+                "buy_now": "BUY NOW",
+                "ramadan_must_haves": "RAMADAN MUST HAVES",
+                "bestsellers": "BESTSELLERS",
+                "our_promise": "OUR PROMISE",
+                "advanced_skincare": "ADVANCED SKINCARE BACKED BY SCIENCE",
+                "integrated_philosophy": "OUR INTEGRATED SKINCARE PHILOSOPHY",
+                "doctors_choice": "DOCTOR'S CHOICE THIS RAMADAN",
+                "visible_results": "VISIBLE RESULTS*",
+                "product_information": "PRODUCT INFORMATION >>",
+                "transform_skin": "TRANSFORM YOUR SKIN",
+                "ptiox_benefits": "P-TIOX Benefits",
+                "ptiox": "P-TIOX",
+                "ce_ferulic": "C E FERULIC",
+                "ha_intensifier": "H.A INTENSIFIER MULTI-GLYCAN",
+                "before": "Before",
+                "after": "After (in 12 weeks)",
+                "source_note": "* Source: Forehead fine lines. Clinical assessment by expert, 50 women, 12 weeks.",
+                "choose_region": "Choose Your Region",
+                "copyright": "© COPYRIGHT © 2025 LOREAL. ALL RIGHTS RESERVED.",
+                "privacy_policy": "Privacy Policy",
+                "terms_of_service": "Terms of Service",
+                "promise_text_1": "Born from decades of skin cancer research that led to pivotal breakthroughs in antioxidants, our high potency formulas are concentrated in pure actives and proven to penetrate optimally into skin.",
+                "promise_text_2": "Our clinical skincare is used by dermatologists, plastic surgeons, and medi-spas for daily homecare, and to complement aesthetic treatments. We formulate to correct signs of aging, protect healthy skin, and prevent future damage.",
+                "science_text": "Our mission is to improve skin health. Dedicated to this purpose, we make one simple promise—to provide advanced skincare backed by science.",
+                "philosophy_text": "At SkinCeuticals, we've developed an integrated skincare approach that ensures optimal consumer results. Our powerful products are designed to work synergistically with clinical procedures and other professional treatments to yield dramatic skin improvement.",
+                "dermatologist": "Dermatologist",
+                "consultant_dermatologist": "Consultant Dermatologist",
+                "aesthetic_doctor": "Aesthetic Doctor",
+                "age_interrupter_title": "A.G.E. Interrupter Advanced",
+                "age_interrupter_text": "Potent anti-wrinkle cream that helps reverse visible signs of aging, including fine lines and deep wrinkles, impacted by collagen decline and glycation.",
+                "ce_ferulic_title": "C E Ferulic",
+                "ce_ferulic_text": "The #1 dermatologist recommended vitamin C serum among medical aesthetic skincare brands - for fine lines and wrinkles",
+                "ha_intensifier_title": "H.A. INTENSIFIER MULTI-GLYCAN",
+                "ha_intensifier_text": "A multi-dimensional volumizing serum with equivalence to 1 Syringe of HA (1 CC)",
+                "ptiox_title": "P-TIOX",
+                "ptiox_text": "Advanced Peptide Powered Serum that reduces Fine lines by up to -68% in 12 weeks.",
+            },
+            arabic: {
+                "nav_english": "English",
+                "nav_arabic": "العربية",
+                "buy_now": "اشتري الآن",
+                "ramadan_must_haves": "ضروريات رمضان",
+                "bestsellers": "الأكثر مبيعًا",
+                "our_promise": "وعدنا",
+                "advanced_skincare": "عناية متقدمة بالبشرة مدعومة بالعلم",
+                "integrated_philosophy": "فلسفتنا المتكاملة للعناية بالبشرة",
+                "doctors_choice": "اختيار الأطباء لهذا الرمضان",
+                "visible_results": "نتائج ملموسة*",
+                "product_information": "معلومات المنتج >>",
+                "transform_skin": "حوّل بشرتك",
+                "ptiox_benefits": "فوائد بي-تيوكس",
+                "ptiox": "بي-تيوكس",
+                "ce_ferulic": "سي إي فيروليك",
+                "ha_intensifier": "إتش إيه إنتنسيفاير مالتي-جلايكن",
+                "before": "قبل",
+                "after": "بعد (في 12 أسبوعًا)",
+                "source_note": "* المصدر: خطوط الجبهة الدقيقة. تقييم سريري من قبل خبير، 50 امرأة، 12 أسبوعًا.",
+                "choose_region": "اختر منطقتك",
+                "copyright": "© حقوق النشر © 2025 لوريال. جميع الحقوق محفوظة.",
+                "privacy_policy": "سياسة الخصوصية",
+                "terms_of_service": "شروط الخدمة",
+                "promise_text_1": "ولدت من عقود من أبحاث سرطان الجلد التي أدت إلى اختراقات محورية في مضادات الأكسدة، تركيباتنا عالية القوة مركزة في المواد الفعالة النقية وثبت أنها تخترق بشكل مثالي البشرة.",
+                "promise_text_2": "يستخدم خبراء العناية بالبشرة السريرية من قبل أطباء الجلدية وجراحي التجميل والمنتجعات الطبية للعناية المنزلية اليومية، ولتكملة العلاجات التجميلية. نحن نصيغ لتصحيح علامات الشيخوخة، وحماية البشرة الصحية، ومنع الضرر المستقبلي.",
+                "science_text": "مهمتنا هي تحسين صحة البشرة. مخصصة لهذا الغرض، نقدم وعدًا بسيطًا واحدًا—لتوفير العناية المتقدمة بالبشرة المدعومة بالعلم.",
+                "philosophy_text": "في سكينسيوتيكالز، طورنا نهجًا متكاملًا للعناية بالبشرة يضمن نتائج مثلى للمستهلك. تم تصميم منتجاتنا القوية للعمل بشكل متآزر مع الإجراءات السريرية والعلاجات المهنية الأخرى لتحقيق تحسن كبير في البشرة.",
+                "dermatologist": "طبيب جلدية",
+                "consultant_dermatologist": "استشاري أمراض جلدية",
+                "aesthetic_doctor": "طبيب تجميل",
+                "age_interrupter_title": "مقاطع إيه.جي.إي المتقدم",
+                "age_interrupter_text": "كريم مضاد للتجاعيد قوي يساعد على عكس العلامات المرئية للشيخوخة، بما في ذلك الخطوط الدقيقة والتجاعيد العميقة، المتأثرة بانخفاض الكولاجين والجليكوزيلية.",
+                "ce_ferulic_title": "سي إي فيروليك",
+                "ce_ferulic_text": "سيروم فيتامين C رقم 1 الموصى به من قبل أطباء الجلدية بين العلامات التجارية للعناية بالبشرة التجميلية الطبية - للخطوط الدقيقة والتجاعيد",
+                "ha_intensifier_title": "إتش إيه إنتنسيفاير مالتي-جلايكن",
+                "ha_intensifier_text": "سيروم تكثيف متعدد الأبعاد يعادل حقنة واحدة من حمض الهيالورونيك (1 سم مكعب)",
+                "ptiox_title": "بي-تيوكس",
+                "ptiox_text": "سيروم متقدم بالببتيد يقلل من الخطوط الدقيقة بنسبة تصل إلى -68٪ في 12 أسبوعًا.",
+            }
+        };
+
+        let currentLanguage = localStorage.getItem('preferredLanguage') || 'english';
+
+        function setLanguage(language) {
+            currentLanguage = language;
+            localStorage.setItem('preferredLanguage', language);
+
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[currentLanguage][key]) {
+                    element.innerHTML = translations[currentLanguage][key];
+                }
+            });
+
+            document.documentElement.setAttribute('dir', language === 'arabic' ? 'rtl' : 'ltr');
+
+            const rtlStylesheet = document.getElementById('rtl-stylesheet');
+            if (language === 'arabic') {
+                if (!rtlStylesheet) {
+                    const link = document.createElement('link');
+                    link.id = 'rtl-stylesheet';
+                    link.rel = 'stylesheet';
+                    link.href = 'css/rtl.css';
+                    document.head.appendChild(link);
+                }
+            } else {
+                if (rtlStylesheet) rtlStylesheet.remove();
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            setLanguage(currentLanguage);
+
+            document.querySelector('#english-btn').addEventListener('click', () => setLanguage('english'));
+            document.querySelector('#arabic-btn').addEventListener('click', () => setLanguage('arabic'));
+        });
+
+
+    </script>
+
     <!-- Modal 1 -->
     <div class="modal fade" id="productModal1" tabindex="-1" aria-labelledby="productModal1Label" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -611,9 +743,9 @@
                 </div>
                 <div class="modal-body">
                     <h5 class="modal-title mb-2" id="productModal1Label">
-                        <b>A.G.E. Interrupter Advanced</b>
+                        <b data-i18n="age_interrupter_title">A.G.E. Interrupter Advanced</b>
                     </h5>
-                    <p>
+                    <p data-i18n="age_interrupter_text">
                         Potent anti-wrinkle cream that helps reverse visible signs of
                         aging, including fine lines and deep wrinkles, impacted by
                         collagen decline and glycation.
@@ -632,9 +764,9 @@
                 </div>
                 <div class="modal-body">
                     <h5 class="modal-title mb-2" id="productModal2Label">
-                        <b> C E Ferulic</b>
+                        <b data-i18n="ce_ferulic_title"> C E Ferulic</b>
                     </h5>
-                    <p>
+                    <p data-i18n="ce_ferulic_text">
                         The #1 dermatologist recommended vitamin C serum among medical
                         aesthetic skincare brands - for fine lines and wrinkles
                     </p>
@@ -652,9 +784,9 @@
                 </div>
                 <div class="modal-body">
                     <h5 class="modal-title mb-2" id="productModal3Label">
-                        <b>H.A. INTENSIFIER MULTI-GLYCAN</b>
+                        <b data-i18n="ha_intensifier_title">H.A. INTENSIFIER MULTI-GLYCAN</b>
                     </h5>
-                    <p>
+                    <p data-i18n="ha_intensifier_text">
                         A multi-dimensional volumizing serum with equivalence to 1 Syringe
                         of HA (1 CC)
                     </p>
@@ -672,9 +804,9 @@
                 </div>
                 <div class="modal-body">
                     <h5 class="modal-title mb-2" id="productModal4Label">
-                        <b>P-TIOX</b>
+                        <b data-i18n="ptiox_title">P-TIOX</b>
                     </h5>
-                    <p>
+                    <p data-i18n="ptiox_text">
                         Advanced Peptide Powered Serum that reduces Fine lines by up to
                         -68% in 12 weeks.
                     </p>
@@ -699,6 +831,7 @@
             </div>
         </div>
     </div>
+
 </body>
 
 </html>
