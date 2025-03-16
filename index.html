@@ -10,7 +10,8 @@
 
 
     <!-- SWIPER CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css">
+
     <!-- CSS -->
     <link href="css/header_style.css" rel="stylesheet">
 
@@ -78,56 +79,158 @@
         <!-- BEST SELLERS -->
         <section>
             <div class="container mt-3">
-                <p class="text-center px-2 p-3 section-title">
+                <p class="text-center px-4 p-3 section-title">
                     <b>BESTSELLERS</b>
                 </p>
             </div>
 
+            <!-- Swiper-->
+            <div class="container-fluid product-carousel">
+                <div class="swiper product-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Product 1 -->
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="assets/age_interrupter.png" alt="A.G.E. Interrupter Advanced"
+                                    class="product-image">
+                                <div class="product-info">
+                                    <h5>PRODUCT INFORMATION >></h5>
+                                </div>
+                            </div>
+                        </div>
 
+                        <!-- Product 2 -->
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="assets/ce_ferulic.png" alt="C E Ferulic" class="product-image">
+                                <div class="product-info">
+                                    <h5>PRODUCT INFORMATION >></h5>
+                                </div>
+                            </div>
+                        </div>
 
-            <!-- Swiper Container -->
-            <div class="swiper-container container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="assets/dr_one.jpg" alt="Image 1"></div>
-                    <div class="swiper-slide"><img src="assets/dr_two.jpeg" alt="Image 2"></div>
-                    <div class="swiper-slide"><img src="assets/dr_three.jpg" alt="Image 3"></div>
-                    <div class="swiper-slide"><img src="assets/dr_four.jpg" alt="Image 4"></div>
+                        <!-- Product 3 -->
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="assets/ha_intensifier.png" alt="H.A Intensifier" class="product-image">
+                                <div class="product-info">
+                                    <h5>PRODUCT INFORMATION >></h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 4 -->
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="assets/ptiox.png" alt="Phloretin CF" class="product-image">
+                                <div class="product-info">
+                                    <h5>PRODUCT INFORMATION >></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Pagination (this will appear below the cards) -->
-                <div class="swiper-pagination"></div>
+                <!-- Pagination dots (custom) -->
+                <div class="pagination-dots">
+                    <span class="dot active"></span>
+                    <span class="dot inactive"></span>
+                </div>
             </div>
+
+
+            <!-- SWIPER Scripts -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    // Initialize Swiper only on tablet and mobile
+                    let swiper = null;
+
+                    function initSwiper() {
+                        if (window.innerWidth < 992) {
+                            if (swiper === null) {
+                                swiper = new Swiper('.product-swiper', {
+                                    // Default settings
+                                    slidesPerView: 1, // Show exactly one card at a time
+                                    spaceBetween: 20, // Space between cards
+                                    centeredSlides: false,
+                                    loop: true,
+                                    pagination: {
+                                        el: '.pagination-dots',
+                                        clickable: true,
+                                        renderBullet: function (index, className) {
+                                            return '<span class="dot ' + (index === 0 ? 'active' : 'inactive') + '"></span>';
+                                        },
+                                    },
+                                    breakpoints: {
+
+                                        // Mobile phone view - EXACTLY ONE CARD
+                                        500: {
+                                            slidesPerView: 2,
+                                            spaceBetween: 10
+                                        },
+                                        // // Tablet view - more cards visible
+                                        768: {
+                                            slidesPerView: 3,
+                                            spaceBetween: 15
+                                        }
+
+
+                                    },
+                                    on: {
+                                        slideChange: function () {
+                                            updatePagination();
+                                        }
+                                    }
+                                });
+                            }
+                        } else if (swiper !== null) {
+                            swiper.destroy();
+                            swiper = null;
+                        }
+                    }
+
+                    // Update pagination dots based on active slide
+                    function updatePagination() {
+                        if (swiper) {
+                            const dots = document.querySelectorAll('.dot');
+                            dots.forEach((dot, index) => {
+                                if (index === Math.floor(swiper.activeIndex % dots.length)) {
+                                    dot.classList.add('active');
+                                    dot.classList.remove('inactive');
+                                } else {
+                                    dot.classList.add('inactive');
+                                    dot.classList.remove('active');
+                                }
+                            });
+                        }
+                    }
+
+                    // Initialize on load
+                    initSwiper();
+
+                    // Reinitialize on window resize
+                    window.addEventListener('resize', function () {
+                        initSwiper();
+                    });
+
+                    // Custom dot navigation
+                    const dots = document.querySelectorAll('.dot');
+                    dots.forEach((dot, index) => {
+                        dot.addEventListener('click', function () {
+                            if (swiper) {
+                                swiper.slideTo(index);
+                                updatePagination();
+                            }
+                        });
+                    });
+                });
+            </script>
+
         </section>
 
-        <!-- Link to Swiper JS -->
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-        <script>
-            var swiper = new Swiper('.swiper-container', {
-                slidesPerView: 1,
-                spaceBetween: 10,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true, // Make pagination clickable
-                },
-                breakpoints: {
-                    1400: {
-                        slidesPerView: 4,
 
-                    },
-                    1200: {
-                        slidesPerView: 3,
-                    },
-                    // When screen width is 600px or smaller, show 2 slides per view
-                    600: {
-                        slidesPerView: 2,
-                    },
-                    // When screen width is 480px or smaller, show 1 slide per view
-                    500: {
-                        slidesPerView: 1.5,
-                    },
-                },
-            });
-        </script>
 
 
 

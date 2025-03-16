@@ -55,7 +55,7 @@ nav a:hover {
 /* Header Image */
 .hero {
   width: 100%;
-  min-height: 380px;
+  min-height: 440px;
   background: url(../assets/header_image.png) no-repeat;
   background-size: contain;
   background-position: center top;
@@ -270,50 +270,131 @@ flex-direction: column;
 }
 
 
+/* SWIPER START*/
 
+ /* Main container for the carousel - REDUCED WIDTH AND HEIGHT */
+        .product-carousel {
+            padding: 20px 0;
+            /* You can adjust max-width to control the overall width of the carousel */
+            max-width: 1200px;
+            /* Adjust this value to reduce container width */
+            margin: 0 auto;
+            /* Center the container */
+        }
 
+        /* Product card style with added padding */
+        .product-card {
+            position: relative;
+            /* Added padding around each card */
+            padding: 5px;
+            /* Adjust this value to increase/decrease padding */
+            margin-bottom: 15px;
+            overflow: hidden;
+            cursor: pointer;
+        }
 
+        /* Product image style - REDUCED HEIGHT */
+        .product-image {
+            width: 100%;
+            /* You can adjust max-height to control image height */
+            max-height: 400px;
+            /* Adjust this value to reduce image height */
+            object-fit: cover;
+        }
 
+        /* Product information bar at bottom */
+        .product-info {
+            position: absolute;
+            bottom: 10px;
+            /* Adjusted to account for padding */
+            left: 10px;
+            /* Adjusted to account for padding */
+            right: 10px;
+            /* Adjusted to account for padding */
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
 
+        /* Product information text style */
+        .product-info h5 {
+            color: #fff;
+            margin: 0;
+            font-size: 15px;
+        }
 
+        /* Arrow style for the ">>" in product information */
+        .arrow {
+            display: inline-block;
+            margin-left: 5px;
+        }
 
+        /* Swiper pagination customization */
+        .swiper-pagination {
+            position: relative;
+            margin-top: 20px;
+        }
 
-/* Make sure the swiper container stretches fully */
-.swiper-container {
-  width: 100%;
-  margin: 0 auto; /* Centers the swiper */
-  overflow: hidden;
+        /* Pagination bullet style */
+        .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            background: #666;
+            opacity: 1;
+        }
 
-  
-}
+        /* Active pagination bullet style */
+        .swiper-pagination-bullet-active {
+            background: #fff;
+        }
 
-/* Ensuring that each slide has the correct width for 4, 3, 2, or 1 slide per view */
-.swiper-slide {
-  box-sizing: border-box; /* Prevent overflow issues */
-}
+        /* Desktop view: No swiper functionality */
+        @media (min-width: 992px) {
+            .swiper-wrapper {
+                display: flex;
+                flex-wrap: wrap;
+            }
 
-.swiper-slide img {
-width: 100%;
-height: 340px;
-object-fit: cover;
-}
+            .swiper-slide {
+                width: 25% !important;
+                /* 4 cards per row */
+                flex-shrink: 0;
+            }
+        }
 
-/* Style for pagination */
-.swiper-pagination {
-  margin-top: 20px; /* Adds space between swiper and pagination */
-  text-align: center;
+        /* Pagination dots style */
+        .pagination-dots {
+            text-align: center;
+            margin: 20px 0;
+            display: none;
+        }
 
+        /* Individual dot style */
+        .dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
 
- 
-}
+        /* Active dot style */
+        .dot.active {
+            background-color: #000;
+        }
 
-/* Styling for pagination bullets */
-.swiper-pagination-bullet {
-  background-color: #000; /* Default bullet color */
-  width: 16px;
-  height: 16px;
+        /* Inactive dot style */
+        .dot.inactive {
+            background-color: #A9A9A9;
+        }
 
-  
-}
+        /* Show pagination on tablet and mobile */
+        @media (max-width: 991px) {
+            .pagination-dots {
+                display: block;
+            }
+        }
 
-
+/* SWIPER END*/
