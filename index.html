@@ -12,7 +12,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css" />
 
     <!-- CSS -->
-    <link href="css/header_style.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+
 </head>
 
 <body>
@@ -28,6 +30,7 @@
     </header>
 
     <main class="main">
+
         <!-- HEADER IMAGE -->
         <section id="hero" class="hero section">
             <div class="container">
@@ -209,7 +212,8 @@
                 <h4 class="text-center">TRANSFORM YOUR SKIN</h4>
             </div>
 
-            <div class="container d-flex justify-content-center gap-4 text-center">
+            <div class="container d-flex justify-content-center gap-4 text-center" data-bs-toggle="modal"
+                data-bs-target="#videoModal">
                 <div class="user-profile">
                     <div class="image">
                         <img src="assets/dr_one.jpg" />
@@ -331,9 +335,30 @@
                 </p>
             </div>
         </section>
+
     </main>
 
-    <!-- Functions -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="assets/skinceuticals_white_logo.png" alt="SkinCeuticals Logo">
+            </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-copyright">
+            © COPYRIGHT © 2025 LOREAL. ALL RIGHTS RESERVED.
+            <span class="footer-links">
+                <a href="https://www.loreal.com/en/group/global-terms-of-use/">Privacy Policy</a> -
+                <a href="https://www.loreal.com/en/group/global-terms-of-use/">Terms of Service</a>
+            </span>
+        </div>
+    </footer>
+
+
     <script>
         function openCustomPopup() {
             document.getElementById("customPopup").style.display = "flex";
@@ -455,7 +480,6 @@
     <div class="modal fade" id="productModal1" tabindex="-1" aria-labelledby="productModal1Label" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content text-center p-4">
-                <!-- Centered Close Button -->
                 <div class="modal-header border-0 d-flex justify-content-center">
                     <button type="button" class="btn-close mx-auto" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -477,7 +501,6 @@
     <div class="modal fade" id="productModal2" tabindex="-1" aria-labelledby="productModal2Label" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content text-center p-4">
-                <!-- Centered Close Button -->
                 <div class="modal-header border-0 d-flex justify-content-center">
                     <button type="button" class="btn-close mx-auto" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -498,7 +521,6 @@
     <div class="modal fade" id="productModal3" tabindex="-1" aria-labelledby="productModal3Label" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content text-center p-4">
-                <!-- Centered Close Button -->
                 <div class="modal-header border-0 d-flex justify-content-center">
                     <button type="button" class="btn-close mx-auto" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -519,7 +541,6 @@
     <div class="modal fade" id="productModal4" tabindex="-1" aria-labelledby="productModal4Label" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content text-center p-4">
-                <!-- Centered Close Button -->
                 <div class="modal-header border-0 d-flex justify-content-center">
                     <button type="button" class="btn-close mx-auto" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -531,6 +552,23 @@
                         Advanced Peptide Powered Serum that reduces Fine lines by up to
                         -68% in 12 weeks.
                     </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Modal -->
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered wider-modal">
+            <div class="modal-content text-center">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body p-0">
+                    <div class="video-container">
+                        <video controls>
+                            <source src="assets/video.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
                 </div>
             </div>
         </div>
