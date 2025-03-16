@@ -2,24 +2,24 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SkinCeuticals</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
 
     <!-- SWIPER CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css" />
 
     <!-- CSS -->
-    <link href="css/header_style.css" rel="stylesheet">
+    <link href="css/header_style.css" rel="stylesheet" />
+</head>
 
 <body>
     <!-- Header Section -->
     <header>
         <a href="index.html" class="logo">
-            <img src="assets/skinceuticals_white_logo.png" alt="SkinCeuticals Logo">
+            <img src="assets/skinceuticals_white_logo.png" alt="SkinCeuticals Logo" />
         </a>
         <nav>
             <a href="#">English</a>
@@ -28,13 +28,11 @@
     </header>
 
     <main class="main">
-
-        <!-- Header Image -->
+        <!-- HEADER IMAGE -->
         <section id="hero" class="hero section">
             <div class="container">
                 <div class="row justify-content-center" data-aos="zoom-out">
-                    <div class="col-xl-7 col-lg-9 text-center">
-                    </div>
+                    <div class="col-xl-7 col-lg-9 text-center"></div>
                 </div>
             </div>
         </section>
@@ -48,7 +46,6 @@
                     </div>
                 </div>
             </div>
-
         </section>
 
         <!-- BUY NOW DIALOG -->
@@ -61,7 +58,7 @@
                 <h3 class="region-header">UAE</h3>
                 <div class="button-container">
                     <a href="https://www.basharacare.com/ae_en/skinceuticals" target="_blank">
-                        <img src="assets/bashara_care.png" alt="Buy in UAE" class="buy-btn-img">
+                        <img src="assets/bashara_care.png" alt="Buy in UAE" class="buy-btn-img" />
                     </a>
                 </div>
 
@@ -70,14 +67,14 @@
                 <div class="button-container">
                     <a href="https://saudi.ounass.com/shop-skinceuticals-syrwm-by-tywks-llq-d-aal-ltjaayd-30-mll-for-unisex-217591771_242.html"
                         target="_blank">
-                        <img src="assets/ounass.png" alt="Buy in KSA" class="buy-btn-img">
+                        <img src="assets/ounass.png" alt="Buy in KSA" class="buy-btn-img" />
                     </a>
                 </div>
             </div>
         </div>
 
         <!-- BEST SELLERS -->
-        <section>
+        <section class="ptiox-benefits-section-1">
             <div class="container mt-3">
                 <p class="text-center px-4 p-3 section-title">
                     <b>BESTSELLERS</b>
@@ -86,45 +83,47 @@
 
             <!-- Swiper-->
             <div class="container-fluid product-carousel">
-                <div class="swiper product-swiper">
-                    <div class="swiper-wrapper">
-                        <!-- Product 1 -->
-                        <div class="swiper-slide">
-                            <div class="product-card">
-                                <img src="assets/age_interrupter.png" alt="A.G.E. Interrupter Advanced"
-                                    class="product-image">
-                                <div class="product-info">
-                                    <h5>PRODUCT INFORMATION >></h5>
+                <div class="container">
+                    <div class="swiper product-swiper-1">
+                        <div class="swiper-wrapper">
+                            <!-- Product 1 -->
+                            <div class="swiper-slide">
+                                <div class="product-card" data-bs-toggle="modal" data-bs-target="#productModal1">
+                                    <img src="assets/age_interrupter.png" alt="A.G.E. Interrupter Advanced"
+                                        class="product-image" />
+                                    <div class="product-info">
+                                        <h5>PRODUCT INFORMATION >></h5>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Product 2 -->
-                        <div class="swiper-slide">
-                            <div class="product-card">
-                                <img src="assets/ce_ferulic.png" alt="C E Ferulic" class="product-image">
-                                <div class="product-info">
-                                    <h5>PRODUCT INFORMATION >></h5>
+                            <!-- Product 2 -->
+                            <div class="swiper-slide">
+                                <div class="product-card" data-bs-toggle="modal" data-bs-target="#productModal2">
+                                    <img src="assets/ce_ferulic.png" alt="C E Ferulic" class="product-image" />
+                                    <div class="product-info">
+                                        <h5>PRODUCT INFORMATION >></h5>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Product 3 -->
-                        <div class="swiper-slide">
-                            <div class="product-card">
-                                <img src="assets/ha_intensifier.png" alt="H.A Intensifier" class="product-image">
-                                <div class="product-info">
-                                    <h5>PRODUCT INFORMATION >></h5>
+                            <!-- Product 3 -->
+                            <div class="swiper-slide">
+                                <div class="product-card" data-bs-toggle="modal" data-bs-target="#productModal3">
+                                    <img src="assets/ha_intensifier.png" alt="H.A Intensifier" class="product-image" />
+                                    <div class="product-info">
+                                        <h5>PRODUCT INFORMATION >></h5>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Product 4 -->
-                        <div class="swiper-slide">
-                            <div class="product-card">
-                                <img src="assets/ptiox.png" alt="Phloretin CF" class="product-image">
-                                <div class="product-info">
-                                    <h5>PRODUCT INFORMATION >></h5>
+                            <!-- Product 4 -->
+                            <div class="swiper-slide">
+                                <div class="product-card" data-bs-toggle="modal" data-bs-target="#productModal4">
+                                    <img src="assets/ptiox.png" alt="Phloretin CF" class="product-image" />
+                                    <div class="product-info">
+                                        <h5>PRODUCT INFORMATION >></h5>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -132,111 +131,12 @@
                 </div>
 
                 <!-- Pagination dots (custom) -->
-                <div class="pagination-dots">
+                <div class="pagination-dots pagination-dots-1">
                     <span class="dot active"></span>
                     <span class="dot inactive"></span>
                 </div>
             </div>
-
-
-            <!-- SWIPER Scripts -->
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
-            <script>
-                document.addEventListener('DOMContentLoaded', function () {
-                    // Initialize Swiper only on tablet and mobile
-                    let swiper = null;
-
-                    function initSwiper() {
-                        if (window.innerWidth < 992) {
-                            if (swiper === null) {
-                                swiper = new Swiper('.product-swiper', {
-                                    // Default settings
-                                    slidesPerView: 1, // Show exactly one card at a time
-                                    spaceBetween: 20, // Space between cards
-                                    centeredSlides: false,
-                                    loop: true,
-                                    pagination: {
-                                        el: '.pagination-dots',
-                                        clickable: true,
-                                        renderBullet: function (index, className) {
-                                            return '<span class="dot ' + (index === 0 ? 'active' : 'inactive') + '"></span>';
-                                        },
-                                    },
-                                    breakpoints: {
-
-                                        // Mobile phone view - EXACTLY ONE CARD
-                                        500: {
-                                            slidesPerView: 2,
-                                            spaceBetween: 10
-                                        },
-                                        // // Tablet view - more cards visible
-                                        768: {
-                                            slidesPerView: 3,
-                                            spaceBetween: 15
-                                        }
-
-
-                                    },
-                                    on: {
-                                        slideChange: function () {
-                                            updatePagination();
-                                        }
-                                    }
-                                });
-                            }
-                        } else if (swiper !== null) {
-                            swiper.destroy();
-                            swiper = null;
-                        }
-                    }
-
-                    // Update pagination dots based on active slide
-                    function updatePagination() {
-                        if (swiper) {
-                            const dots = document.querySelectorAll('.dot');
-                            dots.forEach((dot, index) => {
-                                if (index === Math.floor(swiper.activeIndex % dots.length)) {
-                                    dot.classList.add('active');
-                                    dot.classList.remove('inactive');
-                                } else {
-                                    dot.classList.add('inactive');
-                                    dot.classList.remove('active');
-                                }
-                            });
-                        }
-                    }
-
-                    // Initialize on load
-                    initSwiper();
-
-                    // Reinitialize on window resize
-                    window.addEventListener('resize', function () {
-                        initSwiper();
-                    });
-
-                    // Custom dot navigation
-                    const dots = document.querySelectorAll('.dot');
-                    dots.forEach((dot, index) => {
-                        dot.addEventListener('click', function () {
-                            if (swiper) {
-                                swiper.slideTo(index);
-                                updatePagination();
-                            }
-                        });
-                    });
-                });
-            </script>
-
         </section>
-
-
-
-
-
-
-
-
 
         <!-- OUR PROMISE -->
         <section>
@@ -248,15 +148,16 @@
 
             <div class="container">
                 <p class="custom-align">
-                    Born from decades of skin cancer research that led to pivotal breakthroughs in antioxidants, our
-                    high potency formulas are concentrated in pure actives and proven to penetrate optimally into skin.
+                    Born from decades of skin cancer research that led to pivotal
+                    breakthroughs in antioxidants, our high potency formulas are
+                    concentrated in pure actives and proven to penetrate optimally into
+                    skin.
                 </p>
                 <p class="custom-align mb-5">
-                    Our clinical skincare is used by dermatologists, plastic surgeons, and medi-spas for daily homecare,
-                    and to complement aesthetic treatments. We formulate to correct signs of aging, protect healthy
-                    skin, and
-                    prevent
-                    future damage.
+                    Our clinical skincare is used by dermatologists, plastic surgeons,
+                    and medi-spas for daily homecare, and to complement aesthetic
+                    treatments. We formulate to correct signs of aging, protect healthy
+                    skin, and prevent future damage.
                 </p>
             </div>
         </section>
@@ -268,16 +169,15 @@
                     <b>ADVANCED SKINCARE BACKED BY SCIENCE</b>
                 </p>
             </div>
+
             <div class="container">
                 <p class="custom-align mb-5">
-                    Our mission is to improve skin health. Dedicated to this purpose, we make one simple promise—to
-                    provide advanced
-                    skincare backed by science.
+                    Our mission is to improve skin health. Dedicated to this purpose, we
+                    make one simple promise—to provide advanced skincare backed by
+                    science.
                 </p>
             </div>
-            </div>
         </section>
-
 
         <!-- Our Integrated Skincare philosophy -->
         <section>
@@ -286,15 +186,14 @@
                     <b>OUR INTEGRATED SKINCARE PHILOSOPHY</b>
                 </p>
             </div>
+
             <div class="container">
                 <p class="custom-align mb-5">
-                    At SkinCeuticals, we’ve developed an integrated skincare approach that ensures optimal consumer
-                    results. Our powerful
-                    products are designed to work synergistically with clinical procedures and other professional
-                    treatments to yield
-                    dramatic skin improvement.
+                    At SkinCeuticals, we’ve developed an integrated skincare approach
+                    that ensures optimal consumer results. Our powerful products are
+                    designed to work synergistically with clinical procedures and other
+                    professional treatments to yield dramatic skin improvement.
                 </p>
-            </div>
             </div>
         </section>
 
@@ -307,19 +206,16 @@
             </div>
 
             <div class="container">
-                <h4 class="text-center">
-                    TRANSFORM YOUR SKIN
-                </h4>
+                <h4 class="text-center">TRANSFORM YOUR SKIN</h4>
             </div>
 
-            <div class="container d-flex justify-content-center gap-4 text-center ">
-
+            <div class="container d-flex justify-content-center gap-4 text-center">
                 <div class="user-profile">
                     <div class="image">
                         <img src="assets/dr_one.jpg" />
                     </div>
                     <h4><b>Dr. Linah Saleh</b></h4>
-                    <p> Dermatologist </p>
+                    <p>Dermatologist</p>
                 </div>
 
                 <div class="user-profile">
@@ -327,7 +223,7 @@
                         <img src="assets/dr_two.jpeg" />
                     </div>
                     <h4><b>Dr. Nour Gerbaka</b></h4>
-                    <p> Dermatologist </p>
+                    <p>Dermatologist</p>
                 </div>
 
                 <div class="user-profile">
@@ -335,7 +231,7 @@
                         <img src="assets/dr_three.jpg" />
                     </div>
                     <h4><b>Dr. Salma Barqawi</b></h4>
-                    <p> Consultant Dermatologist </p>
+                    <p>Consultant Dermatologist</p>
                 </div>
 
                 <div class="user-profile">
@@ -343,11 +239,9 @@
                         <img src="assets/dr_four.jpg" />
                     </div>
                     <h4><b>Dr. Shahad</b></h4>
-                    <p> Aesthetic Doctor </p>
+                    <p>Aesthetic Doctor</p>
                 </div>
-
             </div>
-
         </section>
 
         <!-- Ramadan Must Have -->
@@ -366,9 +260,78 @@
             </div>
         </section>
 
+        <!-- P-TIOX Benefits -->
+        <section>
+            <div class="container">
+                <h4 class="text-center"><b>P-TIOX Benefits</b></h4>
+            </div>
 
+            <!-- Swiper-->
+            <div class="container-fluid product-carousel">
+                <div class="container">
+                    <div class="swiper product-swiper-2">
+                        <div class="swiper-wrapper">
+                            <!-- Product 1 -->
+                            <div class="swiper-slide">
+                                <div class="product-card">
+                                    <img src="assets/ptiox_benefit_one.png" alt="A.G.E. Interrupter Advanced"
+                                        class="product-image" />
+                                </div>
+                            </div>
+
+                            <!-- Product 2 -->
+                            <div class="swiper-slide">
+                                <div class="product-card">
+                                    <img src="assets/ptiox_benefit_two.png" alt="C E Ferulic" class="product-image" />
+                                </div>
+                            </div>
+
+                            <!-- Product 3 -->
+                            <div class="swiper-slide">
+                                <div class="product-card">
+                                    <img src="assets/ptiox_benefit_three.png" alt="H.A Intensifier"
+                                        class="product-image" />
+                                </div>
+                            </div>
+
+                            <!-- Product 4 -->
+                            <div class="swiper-slide">
+                                <div class="product-card">
+                                    <img src="assets/ptiox_benefit_four.png" alt="Phloretin CF" class="product-image" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination dots (custom) -->
+                <div class="pagination-dots pagination-dots-2">
+                    <span class="dot active"></span>
+                    <span class="dot inactive"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- BUY NOW BUTTON -->
+        <section>
+            <div class="row justify-content-center" id="testimonials">
+                <div class="col-xl-3">
+                    <div class="text-center">
+                        <a class="cta-btn" href="#" onclick="openCustomPopup()"><b>BUY NOW</b></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visible Result -->
+        <section>
+            <div class="container mt-3">
+                <p class="text-center px-4 p-3 section-title">
+                    <b>VISIBLE RESULTS*</b>
+                </p>
+            </div>
+        </section>
     </main>
-
 
     <!-- Functions -->
     <script>
@@ -379,10 +342,7 @@
         function closeCustomPopup() {
             document.getElementById("customPopup").style.display = "none";
         }
-
     </script>
-
-
 
     <!-- Script -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -392,7 +352,189 @@
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
 
+    <!-- SWIPER Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let swiper1 = null;
+            let swiper2 = null;
 
+            function initSwipers() {
+                if (window.innerWidth < 992) {
+                    if (swiper1 === null) {
+                        swiper1 = new Swiper(".product-swiper-1", {
+                            slidesPerView: 1,
+                            spaceBetween: 20,
+                            loop: true,
+                            pagination: {
+                                el: ".pagination-dots-1",
+                                clickable: true,
+                                renderBullet: function (index, className) {
+                                    return (
+                                        '<span class="dot ' +
+                                        (index === 0 ? "active" : "inactive") +
+                                        '"></span>'
+                                    );
+                                },
+                            },
+                            breakpoints: {
+                                500: { slidesPerView: 2, spaceBetween: 10 },
+                                768: { slidesPerView: 3, spaceBetween: 15 },
+                            },
+                            on: {
+                                slideChange: function () {
+                                    updatePagination(swiper1, ".pagination-dots-1");
+                                },
+                            },
+                        });
+                    }
+
+                    if (swiper2 === null) {
+                        swiper2 = new Swiper(".product-swiper-2", {
+                            slidesPerView: 1,
+                            spaceBetween: 20,
+                            loop: true,
+                            pagination: {
+                                el: ".pagination-dots-2",
+                                clickable: true,
+                                renderBullet: function (index, className) {
+                                    return (
+                                        '<span class="dot ' +
+                                        (index === 0 ? "active" : "inactive") +
+                                        '"></span>'
+                                    );
+                                },
+                            },
+                            breakpoints: {
+                                500: { slidesPerView: 2, spaceBetween: 10 },
+                                768: { slidesPerView: 3, spaceBetween: 15 },
+                            },
+                            on: {
+                                slideChange: function () {
+                                    updatePagination(swiper2, ".pagination-dots-2");
+                                },
+                            },
+                        });
+                    }
+                } else {
+                    if (swiper1 !== null) {
+                        swiper1.destroy();
+                        swiper1 = null;
+                    }
+                    if (swiper2 !== null) {
+                        swiper2.destroy();
+                        swiper2 = null;
+                    }
+                }
+            }
+
+            function updatePagination(swiper, paginationClass) {
+                if (swiper) {
+                    const dots = document.querySelectorAll(paginationClass + " .dot");
+                    dots.forEach((dot, index) => {
+                        if (index === Math.floor(swiper.activeIndex % dots.length)) {
+                            dot.classList.add("active");
+                            dot.classList.remove("inactive");
+                        } else {
+                            dot.classList.add("inactive");
+                            dot.classList.remove("active");
+                        }
+                    });
+                }
+            }
+
+            initSwipers();
+            window.addEventListener("resize", function () {
+                initSwipers();
+            });
+        });
+    </script>
+
+    <!-- Modal 1 -->
+    <div class="modal fade" id="productModal1" tabindex="-1" aria-labelledby="productModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center p-4">
+                <!-- Centered Close Button -->
+                <div class="modal-header border-0 d-flex justify-content-center">
+                    <button type="button" class="btn-close mx-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5 class="modal-title mb-2" id="productModal1Label">
+                        <b>A.G.E. Interrupter Advanced</b>
+                    </h5>
+                    <p>
+                        Potent anti-wrinkle cream that helps reverse visible signs of
+                        aging, including fine lines and deep wrinkles, impacted by
+                        collagen decline and glycation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="modal fade" id="productModal2" tabindex="-1" aria-labelledby="productModal2Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center p-4">
+                <!-- Centered Close Button -->
+                <div class="modal-header border-0 d-flex justify-content-center">
+                    <button type="button" class="btn-close mx-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5 class="modal-title mb-2" id="productModal2Label">
+                        <b> C E Ferulic</b>
+                    </h5>
+                    <p>
+                        The #1 dermatologist recommended vitamin C serum among medical
+                        aesthetic skincare brands - for fine lines and wrinkles
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="modal fade" id="productModal3" tabindex="-1" aria-labelledby="productModal3Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center p-4">
+                <!-- Centered Close Button -->
+                <div class="modal-header border-0 d-flex justify-content-center">
+                    <button type="button" class="btn-close mx-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5 class="modal-title mb-2" id="productModal3Label">
+                        <b>H.A. INTENSIFIER MULTI-GLYCAN</b>
+                    </h5>
+                    <p>
+                        A multi-dimensional volumizing serum with equivalence to 1 Syringe
+                        of HA (1 CC)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div class="modal fade" id="productModal4" tabindex="-1" aria-labelledby="productModal4Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center p-4">
+                <!-- Centered Close Button -->
+                <div class="modal-header border-0 d-flex justify-content-center">
+                    <button type="button" class="btn-close mx-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5 class="modal-title mb-2" id="productModal4Label">
+                        <b>P-TIOX</b>
+                    </h5>
+                    <p>
+                        Advanced Peptide Powered Serum that reduces Fine lines by up to
+                        -68% in 12 weeks.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
